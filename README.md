@@ -1,6 +1,6 @@
 # 简介
 
-这是一个将umaviewer导出的pmx文件中部分骨骼名称翻译为可被desktopmmd4桌宠软件使用的脚本，运行exe文件后，点击按钮即可自动翻译
+这是一个将Umaviewer(katboi01/UmaViewer)导出的pmx文件中部分骨骼名称翻译为可被desktopmmd4桌宠软件使用的脚本
 
 # 使用
 
