@@ -14,6 +14,8 @@
    2.2 点击"start"运行，运行时间1分钟左右，在此期间会自动控制您的鼠标和键盘，如果要强行退出，建议ctrl + alt + delete
 
    ![1706104400266](image/README/1706104400266.png)
-3. 手动保存pmx文件，之后，它就可以用于desktopmmd4了
-   <video src="https://github.com/Songbangya/umaviewer-desktop-translate-script/blob/master/mmd_basic_show.mp4?raw=true" controls="controls">
-   </video>
+3. 手动保存pmx文件，之后，它就可以用于desktopmmd4了，支持语音、跳舞等
+   ![](image/README/Snipaste_2024-01-24_23-38-40.jpg)
+   ![](image/README/Snipaste_2024-01-24_23-39-12.jpg)
+   ![](image/README/Snipaste_2024-01-24_23-39-34.jpg)
+   ![](image/README/Snipaste_2024-01-24_23-40-51.jpg)
