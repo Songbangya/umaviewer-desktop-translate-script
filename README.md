@@ -15,4 +15,4 @@
 
    ![1706104400266](image/README/1706104400266.png)
 3. 手动保存pmx文件，之后，它就可以用于desktopmmd4了
-   (https://github.com/Songbangya/umaviewer-desktop-translate-script/blob/master/image/README/mmd_basic_show.mp4)https://github.com/Songbangya/umaviewer-desktop-translate-script/blob/master/image/README/mmd_basic_show.mp4
+   (https://github.com/Songbangya/umaviewer-desktop-translate-script/blob/master/image/README/mmd_basic_show.mp4)
