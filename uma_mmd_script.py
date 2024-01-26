@@ -6,7 +6,12 @@ from tkinter import messagebox
 
 
 def script_click():
-    pyautogui.PAUSE = 0.02
+    try:
+        pyautogui.PAUSE = float(entry_interval.get())
+    except ValueError:
+        messagebox.showinfo("warn", "Please do not enter non-numbers")
+        return
+
     directory = "files/"
     bone_origin = ['Hip', 'Thigh_L', 'Knee_L', 'Ankle_L', 'Thigh_R', 'Knee_R', 'Ankle_R',
                 'Spine', 'Chest', 'Head', 'Shoulder_L', 'Arm_L', 'Elbow_L', 'Wrist_L',
@@ -22,6 +27,7 @@ def script_click():
         pyautogui.click(bone_list_pos_x, bone_list_pos_y)
     except pyautogui.ImageNotFoundException:
         messagebox.showinfo("warn", "please make sure that pmxeditor switches to the bone interface and is displayed completely on the screen")
+        return
 
     # 找到修改骨骼名称处
     position = pyautogui.locateOnScreen(directory+"bonename.png", confidence=0.9)
@@ -29,9 +35,9 @@ def script_click():
     bone_name_pos_y = position.top + 10
 
     num = 0
-    bone_num = 0
-    origin_value = bone_origin[0]
+    text = ""
     while True:
+        last_text = text
         num += 1
         # 前20轮循环，骨骼列表一直在向下走
         if num <= 20:
@@ -41,22 +47,33 @@ def script_click():
         else:
             pyautogui.click(bone_list_pos_x, bone_list_pos_y)
             pyautogui.press("down")
-        # 去修改骨骼名称处  复制并回传骨骼名称
-        pyautogui.click(bone_name_pos_x, bone_name_pos_y)
-        pyautogui.hotkey("ctrl", "a")
-        pyautogui.hotkey("ctrl", "c")
-        text = paste()
+
+        while text == last_text:
+            print(1, text)
+            # 去修改骨骼名称处  复制并回传骨骼名称
+            pyautogui.click(bone_name_pos_x, bone_name_pos_y)
+            pyautogui.hotkey("ctrl", "a")
+            pyautogui.hotkey("ctrl", "c")
+            text = paste()
+
         # 检测如果需要修改，修改
-        if text == origin_value:
-            value = bone_change[bone_num]
-            print(text, value)
-            copy(value)
-            time.sleep(0.5)
-            pyautogui.hotkey("ctrl", "v")
-            if text == "Wrist_R":
+        if text in bone_origin:
+            index = bone_origin.index(text)
+            value = bone_change[index]
+            print(2, text, value)
+            check = ""
+            while check != value:
+                copy(value)
+                time.sleep(0.5)
+                pyautogui.hotkey("ctrl", "v")
+                pyautogui.hotkey("ctrl", "a")
+                pyautogui.hotkey("ctrl", "c")
+                check = paste()
+                text = check
+            if check == "右手首":
                 break
-            bone_num += 1
-            origin_value = bone_origin[bone_num]
+
+    messagebox.showinfo("congratulation", "translate complete")
 
 
 if __name__ == "__main__":
@@ -64,7 +81,13 @@ if __name__ == "__main__":
     root.title("Script")
     root.geometry("300x100")
 
+    label_interval = tk.Label(root, text="Operation interval(s):")
+    label_interval.place(x=10, y=15)
+    entry_interval = tk.Entry(root)
+    entry_interval.insert(0, "0.01")
+    entry_interval.place(x=180, y=15, width=100)
+
     button = tk.Button(root, text="click here to start", command=script_click)
-    button.place(x=80, y=30)
+    button.place(x=80, y=50)
 
     root.mainloop()
