@@ -6,11 +6,7 @@ from tkinter import messagebox
 
 
 def script_click():
-    try:
-        pyautogui.PAUSE = float(entry_interval.get())
-    except ValueError:
-        messagebox.showinfo("warn", "Please do not enter non-numbers")
-        return
+    pyautogui.PAUSE = 0.01
 
     directory = "files/"
     bone_origin = ['Hip', 'Thigh_L', 'Knee_L', 'Ankle_L', 'Thigh_R', 'Knee_R', 'Ankle_R',
@@ -81,13 +77,7 @@ if __name__ == "__main__":
     root.title("Script")
     root.geometry("300x100")
 
-    label_interval = tk.Label(root, text="Operation interval(s):")
-    label_interval.place(x=10, y=15)
-    entry_interval = tk.Entry(root)
-    entry_interval.insert(0, "0.01")
-    entry_interval.place(x=180, y=15, width=100)
-
     button = tk.Button(root, text="click here to start", command=script_click)
-    button.place(x=80, y=50)
+    button.place(x=80, y=25)
 
     root.mainloop()
