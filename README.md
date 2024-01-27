@@ -6,7 +6,7 @@
 
 1. 用中文版pmxeditor打开pmx文件，并切换到骨骼界面，同时在屏幕中显示。
    注意要将pmxeditor右键属性-兼容性调整字体显示，否则本脚本无法运行
-   ![](image/README/pmxeditor_bone.png)![](image/README/change_method.png)
+   ![](image/README/pmxeditor_bone.png)![](image/README/change_method.jpg)
 2. 启动本程序，并点击按钮开始自动转换，运行时间1分钟左右，在此期间会自动控制您的鼠标和键盘，如果要强行退出，建议ctrl + alt + delete
 
    ![](image/README/Snipaste_2024-01-26_23-30-31.jpg)
