@@ -4,13 +4,13 @@
 
 # 使用
 
-1. 用中文版pmxeditor打开pmx文件，并切换到骨骼界面，同时在屏幕中显示。
-   注意要将pmxeditor右键属性-兼容性调整字体显示，否则本脚本无法运行
-   ![](image/README/pmxeditor_bone.png)![](image/README/change_method.jpg)
-2. 启动本程序，并点击按钮开始自动转换，运行时间1分钟左右，在此期间会自动控制您的鼠标和键盘，如果要强行退出，建议ctrl + alt + delete
+1. 将pmxeditor右键属性-兼容性调整字体显示，否则本脚本无法运行![](image/README/change_method.jpg)
+2. 用中文版pmxeditor打开pmx文件，并切换到骨骼界面，同时在屏幕中显示。
+   ![](image/README/pmxeditor_bone.png)
+3. 启动本程序，并点击按钮开始自动转换，运行时间1分钟左右，在此期间会自动控制您的鼠标和键盘，如果要强行退出，建议ctrl + alt + delete
 
    ![](image/README/Snipaste_2024-01-26_23-30-31.jpg)
-3. 手动保存pmx文件，之后，它就可以用于desktopmmd4了，支持语音、跳舞等
+4. 手动保存pmx文件，之后，它就可以用于desktopmmd4了，支持语音、跳舞等
    ![](image/README/Snipaste_2024-01-24_23-38-40.jpg)
    ![](image/README/Snipaste_2024-01-24_23-39-12.jpg)
    ![](image/README/Snipaste_2024-01-24_23-39-34.jpg)
